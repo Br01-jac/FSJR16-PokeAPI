@@ -1,0 +1,9 @@
+.select-filtros{
+    width: 70%;
+}
+
+.contenedor{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
