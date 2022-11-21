@@ -25,11 +25,8 @@ export default function Prueba({ seleccion, nombrePokemon }) {
         }
         setPokemons((pokemons) => [...pokemons, pokemon]);
       });
-
-      // setContextData(pokemons.length)
     } else {
       setPokemons([]);
-      //setContextData(pokemons.length)
     }
 
   }
@@ -45,11 +42,8 @@ export default function Prueba({ seleccion, nombrePokemon }) {
           }
           setPokemons((pokemons) => [...pokemons, pokemon]);
         })
-      // setContextData(pokemons.length)
-
     } else {
       setPokemons([]);
-      // setContextData(pokemons.length)
     }
 
   }
@@ -68,10 +62,8 @@ export default function Prueba({ seleccion, nombrePokemon }) {
         }
         setPokemons((pokemons) => [...pokemons, pokemon]);
       }
-      // setContextData(pokemons.length)
     } else {
       setPokemons([]);
-      //  setContextData(pokemons.length)
     }
 
   }
