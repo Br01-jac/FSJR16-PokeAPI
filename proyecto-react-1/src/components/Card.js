@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Card({ name, id, avatar }) {
+export default function Card({ name,avatar }) {
 
     return (
         <>

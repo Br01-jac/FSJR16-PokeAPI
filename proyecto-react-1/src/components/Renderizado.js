@@ -1,14 +1,16 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useContext } from 'react';
 import axios from 'axios';
 import ContenedorCards from './ContenedorCards';
 import "../styles/renderizado.css"
+import { DataContext } from '../contexts/dataContext';
 export default function Prueba({ seleccion, nombrePokemon }) {
 
   const [pokemons, setPokemons] = useState([]);
   let estado = seleccion;
   let pokemonName = nombrePokemon.toLowerCase();
   let btnRef = useRef();
-
+  const { setContextData } = useContext(DataContext)
+  setContextData(pokemons.length);
   const Fetchapi = async () => {
     if (pokemons.length === 0) {
       let resp = await fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100");
@@ -23,8 +25,11 @@ export default function Prueba({ seleccion, nombrePokemon }) {
         }
         setPokemons((pokemons) => [...pokemons, pokemon]);
       });
+
+      // setContextData(pokemons.length)
     } else {
       setPokemons([]);
+      //setContextData(pokemons.length)
     }
 
   }
@@ -40,9 +45,11 @@ export default function Prueba({ seleccion, nombrePokemon }) {
           }
           setPokemons((pokemons) => [...pokemons, pokemon]);
         })
+      // setContextData(pokemons.length)
 
     } else {
       setPokemons([]);
+      // setContextData(pokemons.length)
     }
 
   }
@@ -61,14 +68,15 @@ export default function Prueba({ seleccion, nombrePokemon }) {
         }
         setPokemons((pokemons) => [...pokemons, pokemon]);
       }
+      // setContextData(pokemons.length)
     } else {
       setPokemons([]);
+      //  setContextData(pokemons.length)
     }
 
   }
 
   const handlerSubmit = () => {
-
     if (pokemonName === "") {
       Fetchapi();
     } else if (pokemonName !== "" && estado === 3) {
@@ -82,7 +90,11 @@ export default function Prueba({ seleccion, nombrePokemon }) {
     } else {
       btnRef.current.textContent = "Mostrar";
     }
-
+    if (pokemons.length === 0) {
+      setContextData(0)
+    } else {
+      setContextData(pokemons.length)
+    }
 
   }
   return (

@@ -1,13 +1,17 @@
+
 import './App.css';
 import Footer from './components/Footer';
 import Principal from './components/Principal';
+import { DataContextProvider } from './contexts/dataContext';
 
 
 function App() {
   return (
     <div className="App">
-      <Principal />
-      <Footer />
+      <DataContextProvider>
+        <Principal />
+        <Footer  />
+      </DataContextProvider>
     </div>
   );
 }
