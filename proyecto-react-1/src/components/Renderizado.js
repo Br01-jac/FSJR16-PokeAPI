@@ -64,6 +64,7 @@ export default function Prueba({ seleccion, nombrePokemon }) {
       }
     } else {
       setPokemons([]);
+      //  setContextData(pokemons.length)
     }
 
   }
