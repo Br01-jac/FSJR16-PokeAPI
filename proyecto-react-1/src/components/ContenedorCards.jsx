@@ -2,7 +2,7 @@
 import Card from './Card'
 
 export default function ContenedorCards({ arregloPokemons }) {
-  const handlerBackground = () => {
+  const handlerBackground = (e) => {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
@@ -15,7 +15,6 @@ export default function ContenedorCards({ arregloPokemons }) {
     <>
       <div className="contenedor-cards">
         {arregloPokemons.map((el) => (
-
           <Card key={el.id} name={el.name} avatar={el.avatar} fondo={handlerBackground()} />
         ))}
       </div>

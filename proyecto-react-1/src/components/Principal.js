@@ -71,6 +71,33 @@ export default function Principal() {
                                     aria-label="Search"
                                     ref={controlInput} />
                             </form>
+                            <div className="contenedor-categorias">
+                                <div>
+                                    <h5 style={{ marginTop: "10px" }}>Categorias posibles</h5>
+                                </div>
+                                <div className="categorias">
+                                    <div>normal</div>
+                                    <div>fighting</div>
+                                    <div>flying</div>
+                                    <div>poison</div>
+                                    <div>ground</div>
+                                    <div>rock</div>
+                                    <div>bug</div>
+                                    <div>ghost</div>
+                                    <div>steel</div>
+                                    <div>fire</div>
+                                    <div>water</div>
+                                    <div>grass</div>
+                                    <div>electric</div>
+                                    <div>psychic</div>
+                                    <div>ice</div>
+                                    <div>dragon</div>
+                                    <div>dark</div>
+                                    <div>fairy</div>
+                                    <div>unknown</div>
+                                    <div>shadow</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
